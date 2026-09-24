@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahadev Auto Service | Fast, Reliable, Smart Car Service</title>
+<meta name="description" content="Mahadev Auto Service: car servicing, repairs, AC, brakes, battery, tyres, denting, painting and detailing. Book on WhatsApp.">
+<link rel="canonical" href="https://mahadevautoservice.shop/">
+<meta name="theme-color" content="#0f1214">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+:root{
+  --bg:#f4f3ef;--surface:#ffffff;--ink:#121416;--muted:#555b61;--line:#dedcd5;
+  --accent:#e2621b;--accent-ink:#1a0d04;--dark:#0f1214;--wa:#1f8f4e;
+  --r:14px;--cf-accent:#e2621b;--cf-accent2:#1f8f4e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 16px}
+main{position:relative;z-index:10;background:var(--bg)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.1}
+h2{font-size:clamp(1.75rem,5vw,2.75rem);font-weight:800}
+.sub{color:var(--muted);max-width:52ch;margin-top:10px;font-size:1.02rem}
+section{padding:72px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap;transition:transform .2s,background .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#177a41}
+.btn-ghost{border:1.5px solid currentColor}
+.ph{font-size:1.25em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,18,20,.86);backdrop-filter:blur(12px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:1.05rem;white-space:nowrap}
+.logo span.mark{width:34px;height:34px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.nav-links{display:none;gap:26px;font-size:.95rem}
+.nav-links a{text-decoration:none;opacity:.85}
+.nav-links a:hover{opacity:1}
+.nav .btn{min-height:42px;padding:0 16px;font-size:.9rem}
+@media(min-width:900px){.nav-links{display:flex}}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;color:#fff;background:var(--dark);padding:0}
+.hero-img{position:absolute;inset:0;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,20,.35) 0%,rgba(15,18,20,.2) 40%,rgba(15,18,20,.95) 100%)}
+.hero .wrap{position:relative;padding-top:110px;padding-bottom:56px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.tag i{color:var(--accent)}
+.hero h1{font-size:clamp(2.4rem,9vw,5.2rem);font-weight:800;margin:18px 0 14px;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.08rem;color:#d3d6d9;max-width:44ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-cta .btn-ghost{color:#fff}
+.trust{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:40px;background:rgba(255,255,255,.12);border-radius:var(--r);overflow:hidden}
+.trust div{background:rgba(15,18,20,.75);padding:14px;display:flex;gap:10px;align-items:center;font-size:.9rem;font-weight:600}
+.trust i{color:var(--accent);font-size:1.4rem}
+@media(min-width:760px){.trust{grid-template-columns:repeat(4,1fr)}}
+
+/* promise */
+.promise{display:grid;gap:28px;align-items:center}
+.promise-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:#2a2f33}
+.promise-img img{width:100%;height:100%;object-fit:cover}
+.pillars{margin-top:24px;display:grid;gap:14px}
+.pillar{display:flex;gap:14px;padding:18px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line)}
+.pillar i{font-size:1.6rem;color:var(--accent);flex:none;margin-top:2px}
+.pillar h3{font-size:1.1rem}
+.pillar p{color:var(--muted);font-size:.95rem}
+@media(min-width:900px){.promise{grid-template-columns:1fr 1fr;gap:56px}}
+
+/* services */
+.services{background:var(--dark);color:#fff}
+.services .sub{color:#aab0b5}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:32px}
+.svc{background:#181c1f;border:1px solid #262b2f;border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.svc i.ico{font-size:1.9rem;color:var(--accent)}
+.svc h3{font-size:1.1rem}
+.svc p{color:#aab0b5;font-size:.93rem}
+.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.svc li{font-size:.78rem;padding:4px 10px;border-radius:999px;background:#232829;color:#cfd3d6}
+.price{font-size:.8rem;color:#aab0b5;text-align:right;white-space:nowrap}
+.price b{display:block;color:#fff;font-size:1.05rem}
+.svc a{margin-top:auto;padding-top:10px;color:#7ee2a6;font-weight:700;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.svc.feature{background:linear-gradient(160deg,#2a1608,#181c1f 60%);border-color:#4a2a14}
+.note{font-size:.82rem;color:#8d949a;margin-top:18px}
+@media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}.svc.feature{grid-column:span 2}}
+
+/* parts */
+.parts-ui{display:grid;gap:18px;margin-top:30px}
+.part-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.part-tabs button{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font:inherit;font-weight:600;font-size:.92rem;color:var(--ink);cursor:pointer}
+.part-tabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.part-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:20px}
+.part-head{display:flex;gap:14px;align-items:center}
+.part-head .big{width:60px;height:60px;border-radius:16px;background:#fbe9de;color:var(--accent);display:grid;place-items:center;font-size:2rem;flex:none}
+.part-head h3{font-size:1.4rem}
+.part-head small{color:var(--muted);font-size:.9rem}
+.part-cols{display:grid;gap:14px}
+.part-cols div{padding:16px;border-radius:12px;background:var(--bg)}
+.part-cols h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;display:flex;gap:6px;align-items:center}
+.part-cols ul{padding-left:18px;font-size:.95rem}
+.part-cols li+li{margin-top:4px}
+.part-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.part-foot span{font-size:.92rem;color:var(--muted)}
+.part-foot b{color:var(--ink)}
+@media(min-width:800px){.part-cols{grid-template-columns:repeat(3,1fr)}.part-card{padding:32px}}
+
+/* steps */
+.steps{display:grid;gap:0;margin-top:32px;counter-reset:s;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line)}
+.step::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:1.6rem;color:var(--accent)}
+.step h3{font-size:1.12rem}
+.step p{color:var(--muted);font-size:.95rem}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr);border-top:0}.step{grid-template-columns:1fr;border-bottom:0;border-top:3px solid var(--ink);padding-right:24px}}
+
+/* packages */
+.pk-grid{display:grid;gap:14px;margin-top:32px}
+.pk{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.pk.hot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pk.hot .pk-list li{color:#d3d6d9}
+.pk.hot .pk-price small{color:#aab0b5}
+.pk-name{font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center}
+.pk-name span{font-size:.72rem;background:var(--accent);color:var(--accent-ink);padding:4px 10px;border-radius:999px;font-weight:800}
+.pk-price{font-size:2rem;font-weight:800}
+.pk-price small{display:block;font-size:.8rem;font-weight:500;color:var(--muted)}
+.pk-list{list-style:none;display:grid;gap:8px;font-size:.94rem}
+.pk-list li{display:flex;gap:8px;color:var(--muted)}
+.pk-list i{color:var(--wa);margin-top:3px}
+.pk .btn{margin-top:auto}
+@media(min-width:900px){.pk-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* brands */
+.brands{padding:40px 0;border-block:1px solid var(--line)}
+.brands p{font-weight:700;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.9rem;font-weight:600}
+
+/* why split */
+.why{display:grid;gap:28px}
+.why-img{border-radius:20px;overflow:hidden;aspect-ratio:16/11;background:#2a2f33}
+.why-img img{width:100%;height:100%;object-fit:cover}
+.checks{display:grid;gap:12px;margin-top:22px}
+.checks li{list-style:none;display:flex;gap:12px;align-items:flex-start}
+.checks i{color:var(--accent);font-size:1.3rem;margin-top:1px}
+@media(min-width:900px){.why{grid-template-columns:1.1fr 1fr;align-items:center;gap:56px}}
+
+/* faq */
+.faq{max-width:780px}
+details.q{border-bottom:1px solid var(--line)}
+details.q summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;gap:12px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary i{transition:transform .25s;flex:none}
+details.q[open] summary i{transform:rotate(45deg)}
+details.q p{padding:0 0 20px;color:var(--muted)}
+
+/* cta band */
+.band{background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:36px 24px;display:grid;gap:18px}
+.band h2{max-width:18ch}
+.band p{max-width:46ch;font-weight:500}
+.band .btn-wa{justify-self:start}
+@media(min-width:900px){.band{grid-template-columns:1fr auto;align-items:center;padding:48px}}
+
+/* legal */
+#legal{padding:56px 0 72px}
+#legal h2{font-size:1.4rem;margin-bottom:12px}
+#legal details{border-bottom:1px solid var(--line)}
+#legal summary{cursor:pointer;padding:16px 0;font-weight:600}
+#legal details p{padding-bottom:16px;color:var(--muted);font-size:.92rem}
+
+/* floating wa */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;font-size:1.9rem;box-shadow:0 10px 28px rgba(0,0,0,.28);text-decoration:none}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+@media(prefers-reduced-motion:reduce){.fab::after{animation:none}html{scroll-behavior:auto}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.img-fallback{background:linear-gradient(135deg,#2a2f33,#14181b)}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18468465993"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18468465993');
+</script>
+<script>
+function gtag_report_conversion() {
+  gtag('event', 'conversion', { 'send_to': 'AW-18468465993/BL5NCO6i-IMdEMnaueZE', 'value': 1.0, 'currency': 'INR' });
+  return true;
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark"><i class="ph-bold ph-wrench"></i></span>Mahadev Auto Service</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a><a href="#parts">Car Parts</a><a href="#packages">Packages</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Book Now</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=70&auto=format&fit=crop&w=1600&h=1100" alt="Mechanic working on a car in a service garage" fetchpriority="high" onerror="this.parentNode.classList.add('img-fallback');this.remove()"></div>
+  <div class="wrap">
+    <span class="tag"><i class="ph-fill ph-seal-check"></i>Trusted by car owners across the city</span>
+    <h1>Car service that's <em>fast, reliable</em> and smart.</h1>
+    <p>Servicing, repairs, AC, brakes, tyres and bodywork for every make. Book in one WhatsApp message.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="#services">View Services</a>
+    </div>
+    <div class="trust">
+      <div><i class="ph-bold ph-lightning"></i>Same-day service</div>
+      <div><i class="ph-bold ph-car"></i>Pickup &amp; drop</div>
+      <div><i class="ph-bold ph-receipt"></i>Clear quote first</div>
+      <div><i class="ph-bold ph-shield-check"></i>Service warranty</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap promise">
+    <div class="reveal">
+      <h2>Fast. Reliable. Smart.</h2>
+      <p class="sub">Three promises we build every job around, from a quick oil change to a full engine repair.</p>
+      <div class="pillars">
+        <div class="pillar"><i class="ph-duotone ph-timer"></i><div><h3>Fast</h3><p>Most routine services are done the same day, with pickup and drop at your doorstep.</p></div></div>
+        <div class="pillar"><i class="ph-duotone ph-shield-check"></i><div><h3>Reliable</h3><p>Trained mechanics, quality parts and a service warranty on the work we do.</p></div></div>
+        <div class="pillar"><i class="ph-duotone ph-cpu"></i><div><h3>Smart</h3><p>Computer diagnostics find the real fault, and you get photos and a quote on WhatsApp before we start.</p></div></div>
+      </div>
+    </div>
+    <div class="promise-img reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?fm=jpg&q=70&auto=format&fit=crop&w=1000&h=750" alt="Clean car engine bay" onerror="this.parentNode.classList.add('img-fallback');this.remove()"></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2 class="reveal">Every service your car needs</h2>
+    <p class="sub reveal">One workshop for maintenance, repairs and bodywork. Tap any service to book it on WhatsApp.</p>
+    <div class="svc-grid">
+      <article class="svc feature reveal">
+        <div class="svc-top"><i class="ph-duotone ph-wrench ico"></i><div class="price">Starting from<b>₹2,499</b></div></div>
+        <h3>Periodic Car Service</h3>
+        <p>Complete health check and maintenance as per your car's service schedule.</p>
+        <ul><li>Engine oil &amp; filter</li><li>Air filter</li><li>Brake check</li><li>Fluid top-up</li><li>50-point inspection</li><li>Wash</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-snowflake ico"></i><div class="price">Starting from<b>₹1,499</b></div></div>
+        <h3>AC Service &amp; Repair</h3>
+        <p>Cooling check, gas top-up, cabin filter and compressor repair.</p>
+        <ul><li>Gas refill</li><li>Cooling coil</li><li>Compressor</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-disc ico"></i><div class="price">Starting from<b>₹999</b></div></div>
+        <h3>Brakes</h3>
+        <p>Pads, discs, drums and brake fluid for safe, quiet stopping.</p>
+        <ul><li>Brake pads</li><li>Disc skimming</li><li>Brake oil</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-battery-charging ico"></i><div class="price">Starting from<b>₹499</b></div></div>
+        <h3>Battery &amp; Electricals</h3>
+        <p>Battery test and replacement, alternator, starter and wiring faults.</p>
+        <ul><li>Jump start</li><li>New battery</li><li>Lights</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-tire ico"></i><div class="price">Starting from<b>₹599</b></div></div>
+        <h3>Tyres &amp; Wheel Care</h3>
+        <p>Wheel alignment, balancing, rotation and new tyres.</p>
+        <ul><li>Alignment</li><li>Balancing</li><li>Puncture</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-engine ico"></i><div class="price">Starting from<b>₹799</b></div></div>
+        <h3>Engine Diagnostics &amp; Repair</h3>
+        <p>OBD scan for warning lights, then repair of the exact fault found.</p>
+        <ul><li>Scanner check</li><li>Clutch</li><li>Timing belt</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-paint-roller ico"></i><div class="price">Starting from<b>₹2,199</b></div></div>
+        <h3>Denting &amp; Painting</h3>
+        <p>Dent removal, scratch repair and panel painting with colour matching.</p>
+        <ul><li>Per panel</li><li>Bumper</li><li>Full body</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-sparkle ico"></i><div class="price">Starting from<b>₹699</b></div></div>
+        <h3>Car Wash &amp; Detailing</h3>
+        <p>Foam wash, interior cleaning, polishing and ceramic coating.</p>
+        <ul><li>Foam wash</li><li>Interior</li><li>Coating</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-top"><i class="ph-duotone ph-arrows-down-up ico"></i><div class="price">Starting from<b>₹1,299</b></div></div>
+        <h3>Suspension &amp; Steering</h3>
+        <p>Shock absorbers, bushes, links and steering for a smooth ride.</p>
+        <ul><li>Shockers</li><li>Bushes</li><li>Steering rack</li></ul>
+        <a href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Book this service <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+    </div>
+    <p class="note">Prices are starting estimates and depend on car model and parts. You get the final quote on WhatsApp before any work begins.</p>
+  </div>
+</section>
+
+<section id="parts">
+  <div class="wrap">
+    <h2 class="reveal">Know your car parts</h2>
+    <p class="sub reveal">Pick a part to see what it does, the warning signs, and when to get it checked.</p>
+    <div class="parts-ui reveal">
+      <div class="part-tabs" role="tablist" aria-label="Car parts" id="partTabs"></div>
+      <div class="part-card" role="tabpanel" id="partPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="reveal">How it works</h2>
+    <div class="steps">
+      <div class="step reveal"><div><h3>Message us</h3><p>Send your car model and problem on WhatsApp.</p></div></div>
+      <div class="step reveal"><div><h3>Get a quote</h3><p>We share a clear estimate and a time slot.</p></div></div>
+      <div class="step reveal"><div><h3>Pickup &amp; repair</h3><p>We collect your car and send updates with photos.</p></div></div>
+      <div class="step reveal"><div><h3>Drive happy</h3><p>Car delivered back clean, with the work explained.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="reveal">Service packages</h2>
+    <p class="sub reveal">Simple packages for regular upkeep. Prices shown are starting estimates for hatchbacks.</p>
+    <div class="pk-grid">
+      <div class="pk reveal">
+        <div class="pk-name">Basic Care</div>
+        <div class="pk-price">₹2,499<small>Starting from</small></div>
+        <ul class="pk-list"><li><i class="ph-bold ph-check"></i>Engine oil &amp; oil filter</li><li><i class="ph-bold ph-check"></i>Air filter cleaning</li><li><i class="ph-bold ph-check"></i>Coolant &amp; fluid top-up</li><li><i class="ph-bold ph-check"></i>Exterior wash</li></ul>
+        <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Book Basic</a>
+      </div>
+      <div class="pk hot reveal">
+        <div class="pk-name">Standard Care <span>Most booked</span></div>
+        <div class="pk-price">₹3,999<small>Starting from</small></div>
+        <ul class="pk-list"><li><i class="ph-bold ph-check"></i>Everything in Basic</li><li><i class="ph-bold ph-check"></i>New air filter</li><li><i class="ph-bold ph-check"></i>Brake cleaning &amp; check</li><li><i class="ph-bold ph-check"></i>Battery health test</li><li><i class="ph-bold ph-check"></i>Interior vacuum</li></ul>
+        <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Book Standard</a>
+      </div>
+      <div class="pk reveal">
+        <div class="pk-name">Complete Care</div>
+        <div class="pk-price">₹5,999<small>Starting from</small></div>
+        <ul class="pk-list"><li><i class="ph-bold ph-check"></i>Everything in Standard</li><li><i class="ph-bold ph-check"></i>AC service</li><li><i class="ph-bold ph-check"></i>Wheel alignment &amp; balancing</li><li><i class="ph-bold ph-check"></i>Spark plugs</li><li><i class="ph-bold ph-check"></i>Scanner diagnostics</li></ul>
+        <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Book Complete</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="wrap">
+    <p>We service all major car brands</p>
+    <div class="chips"><span>Maruti Suzuki</span><span>Hyundai</span><span>Tata</span><span>Mahindra</span><span>Honda</span><span>Toyota</span><span>Kia</span><span>Renault</span><span>Volkswagen</span><span>Skoda</span><span>MG</span><span>Nissan</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap why">
+    <div class="why-img reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?fm=jpg&q=70&auto=format&fit=crop&w=1100&h=760" alt="Mechanic inspecting a car" onerror="this.parentNode.classList.add('img-fallback');this.remove()"></div>
+    <div class="reveal">
+      <h2>Why car owners choose us</h2>
+      <ul class="checks">
+        <li><i class="ph-fill ph-check-circle"></i><span><b>No surprise bills.</b> Quote first, work after your OK.</span></li>
+        <li><i class="ph-fill ph-check-circle"></i><span><b>Genuine and quality parts</b>, old parts shown on request.</span></li>
+        <li><i class="ph-fill ph-check-circle"></i><span><b>Photo updates on WhatsApp</b> while your car is with us.</span></li>
+        <li><i class="ph-fill ph-check-circle"></i><span><b>Doorstep pickup and drop</b> to save your time.</span></li>
+        <li><i class="ph-fill ph-check-circle"></i><span><b>Warranty on service</b> as per the job card.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq">
+    <h2 class="reveal">Questions, answered</h2>
+    <details class="q"><summary>How do I book a service?<i class="ph-bold ph-plus"></i></summary><p>Tap any WhatsApp button, send your car model and the service you need. We reply with a quote and a time slot.</p></details>
+    <details class="q"><summary>Do you offer pickup and drop?<i class="ph-bold ph-plus"></i></summary><p>Yes, pickup and drop is available in our service area. Share your location on WhatsApp to confirm.</p></details>
+    <details class="q"><summary>Are the prices fixed?<i class="ph-bold ph-plus"></i></summary><p>Prices shown are starting estimates. The final price depends on your car model and parts needed, and you approve it before work starts.</p></details>
+    <details class="q"><summary>How long does a regular service take?<i class="ph-bold ph-plus"></i></summary><p>Most periodic services are completed the same day. Bigger repairs and bodywork may take longer; we tell you the time upfront.</p></details>
+    <details class="q"><summary>Which cars do you work on?<i class="ph-bold ph-plus"></i></summary><p>Petrol, diesel and CNG cars of all major brands, hatchbacks, sedans and SUVs.</p></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band reveal">
+      <div><h2>Car needs attention? Book in 1 minute.</h2><p>Send us a WhatsApp message and we'll take it from there.</p></div>
+      <a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="legal">
+  <div class="wrap">
+    <h2>Policies</h2>
+    <details><summary>Terms &amp; Conditions</summary><p>Mahadev Auto Service provides car maintenance and repair services. All work is carried out after the customer approves the estimate. Timelines are indicative and may change based on parts availability. By booking a service you agree to these terms.</p></details>
+    <details><summary>Offer Terms</summary><p>Prices shown on this website are "starting from" estimates for standard hatchbacks. Final pricing depends on car make, model, condition and parts used. Offers cannot be combined unless stated.</p></details>
+    <details><summary>Cancellation &amp; Refund Policy</summary><p>You can cancel a booking any time before work starts at no charge. If an advance was paid, it is refunded to the original payment method within 5 to 7 working days. Charges for parts already fitted or labour already done are not refundable.</p></details>
+    <details><summary>Privacy Policy</summary><p>We collect only the details needed to serve you, such as name, phone number, car details and location for pickup. We do not sell your data. This site may use cookies and advertising tags to measure visits and enquiries.</p></details>
+    <details><summary>Disclaimer</summary><p>Mahadev Auto Service is an independent multi-brand car workshop and is not affiliated with any car manufacturer. Brand names are used only to indicate the cars we service. Images are for illustration.</p></details>
+  </div>
+</section>
+
+</main>
+
+<a class="fab" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+
+<style>
+.cf-wrap{position:relative;height:100vh;height:100svh;width:100%;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.cf{position:fixed;left:0;bottom:0;width:100%;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:var(--cf-bg,#0b0d10);color:var(--cf-fg,#f4f4f5);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.cf-aurora{position:absolute;left:50%;top:50%;width:80vw;height:60vh;border-radius:50%;filter:blur(80px);pointer-events:none;background:radial-gradient(circle,color-mix(in srgb,var(--cf-accent,#f2a93b) 22%,transparent) 0%,color-mix(in srgb,var(--cf-accent2,#1faa59) 15%,transparent) 40%,transparent 70%);animation:cf-breathe 8s ease-in-out infinite alternate}
+@keyframes cf-breathe{0%{transform:translate(-50%,-50%) scale(1);opacity:.6}100%{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
+.cf-grid{position:absolute;inset:0;pointer-events:none;background-size:60px 60px;background-image:linear-gradient(to right,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.03) 1px,transparent 1px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent)}
+.cf-giant{position:absolute;bottom:-5vh;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none;user-select:none;font-size:26vw;line-height:.75;font-weight:900;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);background:linear-gradient(180deg,rgba(255,255,255,.1) 0%,transparent 60%);-webkit-background-clip:text;background-clip:text}
+.cf-marquee{position:absolute;top:48px;left:0;width:100%;overflow:hidden;border-block:1px solid rgba(255,255,255,.1);background:rgba(11,13,16,.6);backdrop-filter:blur(12px);padding:14px 0;transform:rotate(-2deg) scale(1.1);z-index:2;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.cf-track{display:flex;width:max-content;animation:cf-marquee 40s linear infinite;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#a1a1aa}
+.cf-track span{padding:0 24px;white-space:nowrap}.cf-track i{font-style:normal;color:var(--cf-accent,#f2a93b)}
+@keyframes cf-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.cf-center{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px 0;max-width:1000px;margin:0 auto;width:100%;text-align:center}
+.cf-glow{font-size:clamp(2rem,8.5vw,6rem);font-weight:900;letter-spacing:-.04em;margin:0 0 36px;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.4) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 20px rgba(255,255,255,.15))}
+.cf-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:14px}
+.cf-pill{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#d4d4d8;border-radius:999px;padding:12px 22px;font-size:14px;font-weight:600;cursor:pointer;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);box-shadow:0 10px 30px -10px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.1);backdrop-filter:blur(16px);transition:background .4s,border-color .4s,color .4s}
+.cf-pill:hover{background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border-color:rgba(255,255,255,.25);color:#fff}
+.cf-pill.cf-big{padding:18px 34px;font-size:16px;font-weight:800;color:#fff;background:var(--cf-accent2,#1faa59);border-color:transparent}
+.cf-bottom{position:relative;z-index:3;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:0 24px 28px;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#a1a1aa}
+.cf-top{width:48px;height:48px;padding:0;justify-content:center;font-size:18px}
+@media(max-width:640px){.cf-bottom{justify-content:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){.cf-aurora,.cf-track{animation:none}}
+</style>
+<div class="cf-wrap" id="cf-wrap">
+  <footer class="cf">
+    <div class="cf-aurora"></div><div class="cf-grid"></div>
+    <div class="cf-giant" id="cf-giant">MAHADEV</div>
+    <div class="cf-marquee"><div class="cf-track">
+      <span>Fast service</span><i>✦</i><span>Reliable mechanics</span><i>✦</i><span>Smart diagnostics</span><i>✦</i><span>Pickup &amp; drop</span><i>✦</i><span>Quote first</span><i>✦</i>
+      <span>Fast service</span><i>✦</i><span>Reliable mechanics</span><i>✦</i><span>Smart diagnostics</span><i>✦</i><span>Pickup &amp; drop</span><i>✦</i><span>Quote first</span><i>✦</i>
+    </div></div>
+    <div class="cf-center">
+      <h2 class="cf-glow" id="cf-head">Ready to book?</h2>
+      <div id="cf-links">
+        <div class="cf-row"><a class="cf-pill cf-big cf-mag" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+        <div class="cf-row"><a class="cf-pill cf-mag" href="#legal">Terms</a><a class="cf-pill cf-mag" href="#legal">Privacy Policy</a><a class="cf-pill cf-mag" href="#legal">Refund Policy</a></div>
+      </div>
+    </div>
+    <div class="cf-bottom"><span>© <span class="cf-yr">2026</span> Mahadev Auto Service. All rights reserved.</span><button class="cf-pill cf-top cf-mag" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var parts=[
+    {n:'Engine Oil',i:'drop',d:'Lubricates and cools the engine so metal parts do not wear out.',s:['Oil warning light','Dark, thick or low oil','Engine sounds louder'],w:['Every 5,000 to 10,000 km','Or once a year'],p:'Oil & filter change'},
+    {n:'Brake Pads',i:'disc',d:'Press against the brake disc to slow and stop your car safely.',s:['Squeaking or grinding','Car pulls to one side','Longer stopping distance'],w:['Check every service','Usually 25,000 to 40,000 km'],p:'Brake service'},
+    {n:'Battery',i:'battery-charging',d:'Starts the engine and powers lights, AC fan and music system.',s:['Slow or clicking start','Dim headlights','Battery older than 3 years'],w:['Test every service','Replace every 3 to 4 years'],p:'Battery test & replace'},
+    {n:'Tyres',i:'tire',d:'Your only contact with the road. They affect grip, braking and mileage.',s:['Low tread depth','Cracks or bulges','Uneven wear or vibration'],w:['Rotate every 10,000 km','Alignment every 5,000 km'],p:'Tyres & alignment'},
+    {n:'AC System',i:'snowflake',d:'Compressor, gas and cooling coil keep the cabin cool in summer.',s:['Weak cooling','Bad smell from vents','Noise when AC is on'],w:['Service every summer','Cabin filter every 10,000 km'],p:'AC service'},
+    {n:'Spark Plugs',i:'lightning',d:'Create the spark that burns fuel in a petrol engine.',s:['Hard starting','Engine misfire or jerks','Lower mileage'],w:['Every 20,000 to 40,000 km'],p:'Spark plug change'},
+    {n:'Air Filter',i:'wind',d:'Stops dust from entering the engine and helps it breathe.',s:['Lower mileage','Black smoke','Slow pickup'],w:['Clean every service','Replace every 15,000 km'],p:'Air filter change'},
+    {n:'Clutch',i:'gear-six',d:'Connects the engine to the gearbox so you can change gears smoothly.',s:['Hard gear shifts','Burning smell','Engine revs but car is slow'],w:['Check if symptoms appear','Usually 60,000 km or more'],p:'Clutch repair'},
+    {n:'Shock Absorbers',i:'arrows-down-up',d:'Keep the ride smooth and the tyres pressed to the road.',s:['Bouncy ride','Knocking over bumps','Oil leak near wheels'],w:['Check every 20,000 km'],p:'Suspension check'},
+    {n:'Coolant',i:'thermometer-hot',d:'Keeps the engine at the right temperature and stops overheating.',s:['Temperature needle high','Sweet smell or leak','Low coolant level'],w:['Top up every service','Replace every 2 years'],p:'Coolant flush'},
+    {n:'Headlights',i:'headlights',d:'Help you see and be seen at night and in rain.',s:['Dim or yellow lens','One bulb not working','Wrong beam angle'],w:['Check every service'],p:'Lights & electricals'},
+    {n:'Wiper Blades',i:'drop-half',d:'Clear rain and dust from the windscreen for clear vision.',s:['Streaks on glass','Squeaking','Cracked rubber'],w:['Replace every 6 to 12 months'],p:'Wiper change'}
+  ];
+  var tabs=document.getElementById('partTabs'),panel=document.getElementById('partPanel');
+  function li(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+  function show(k){
+    var p=parts[k];
+    tabs.querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-selected',j===k?'true':'false');b.tabIndex=j===k?0:-1});
+    panel.innerHTML='<div class="part-head"><div class="big"><i class="ph-duotone ph-'+p.i+'"></i></div><div><h3>'+p.n+'</h3><small>'+p.d+'</small></div></div>'+
+      '<div class="part-cols"><div><h4><i class="ph-bold ph-warning"></i>Warning signs</h4><ul>'+li(p.s)+'</ul></div><div><h4><i class="ph-bold ph-calendar-check"></i>When to check</h4><ul>'+li(p.w)+'</ul></div><div><h4><i class="ph-bold ph-wrench"></i>What we do</h4><ul><li>Free inspection with any service</li><li>Photos shared on WhatsApp</li><li>Replace only after your OK</li></ul></div></div>'+
+      '<div class="part-foot"><span>Related service: <b>'+p.p+'</b></span><a class="btn btn-wa" href="https://wa.link/mahadev2" onclick="return gtag_report_conversion();" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Get it checked</a></div>';
+  }
+  parts.forEach(function(p,k){
+    var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');
+    b.innerHTML='<i class="ph-bold ph-'+p.i+'" aria-hidden="true"></i>'+p.n;
+    b.addEventListener('click',function(){show(k)});
+    b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=(k+(e.key==='ArrowRight'?1:-1)+parts.length)%parts.length;show(n);tabs.children[n].focus()}});
+    tabs.appendChild(b);
+  });
+  show(0);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('.cf-yr').forEach(function(e){e.textContent=new Date().getFullYear()});
+  if(!window.gsap||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var w=document.getElementById('cf-wrap');
+  gsap.fromTo('#cf-giant',{y:'10vh',scale:.8,opacity:0},{y:0,scale:1,opacity:1,ease:'power1.out',scrollTrigger:{trigger:w,start:'top 80%',end:'bottom bottom',scrub:1}});
+  gsap.fromTo(['#cf-head','#cf-links'],{y:50,opacity:0},{y:0,opacity:1,stagger:.15,ease:'power3.out',scrollTrigger:{trigger:w,start:'top 40%',end:'bottom bottom',scrub:1}});
+  if(!window.matchMedia('(hover: hover)').matches)return;
+  document.querySelectorAll('.cf-mag').forEach(function(el){
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;gsap.to(el,{x:x*.4,y:y*.4,rotationX:-y*.15,rotationY:x*.15,scale:1.05,ease:'power2.out',duration:.4})});
+    el.addEventListener('mouseleave',function(){gsap.to(el,{x:0,y:0,rotationX:0,rotationY:0,scale:1,ease:'elastic.out(1,0.3)',duration:1.2})});
+  });
+})();
+</script>
+</body>
+</html>
